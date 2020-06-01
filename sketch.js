@@ -96,15 +96,15 @@ function keyPressed(){
 }
 
 async function getBgImg(){
-    var response = await fetch("https://worldtimeapi.org/api/timezone/Australia/Broken_Hill");
+    var response = await fetch("https://worldtimeapi.org/api/timezone/Asia/Kolkata");
     var responseJSON = await response.json();
     var datetime = responseJSON.datetime;
     var hour = datetime.slice(11, 13);
     if(hour >= 06 && hour <=19){
-        Backdrop = "sprites/bg.png"
+        Backdrop = "sprites/morning.jpg"
     }
     else{
-        Backdrop = "sprites/bg2.jpg"
+        Backdrop = "sprites/night.jpg"
     }
     backgroundImg = loadImage(Backdrop)
 }
